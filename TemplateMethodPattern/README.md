@@ -216,9 +216,9 @@ Dikkat edilmesi gereken yönleri:
 
 # Projende Nasıl Kullanılıyor?
 
-AsamaGlobal.ERP'de Template Method, tasarım kararı olarak değil; mimarinin doğal omurgası olarak her yerde. `Base*` sınıf hiyerarşisinin tamamı bu desendir:
+Template Method, tasarım kararı olarak değil; mimarinin doğal omurgası olarak her yerde. `Base*` sınıf hiyerarşisinin tamamı bu desendir:
 
-* **`BaseEditForm` / `BaseListForm`** formun yaşam döngüsünü (yükleme → doğrulama → kaydetme) iskelet olarak tanımlar; `CariEditForm`, `KisiEditForm` gibi alt formlar yalnızca değişen adımları doldurur.
+* **`BaseEditForm` / `BaseListForm`** formun yaşam döngüsünü (yükleme → doğrulama → kaydetme) iskelet olarak tanımlar; `TestEditForm`, `PersonEditForm` gibi alt formlar yalnızca değişen adımları doldurur.
 * **`BaseBll.Validation`** doğrulama akışının iskeletidir; her alt BLL kendi iş kuralını ekler.
 * **`SilmeyeUygunMu`** virtual metodu Logo tarzı silme akışını tanımlar; "bu kayıt silinebilir mi" adımını her alt sınıf kendine göre override eder (hareket varsa engelle).
 * **`BaseTablo`** `Listele()`, `HareketEkle()`, `HareketSil()` iskeletini sunar; `EPostaTable`, `TelefonTable` gibi çocuk tablolar bu adımları kendi verilerine göre doldurur.
